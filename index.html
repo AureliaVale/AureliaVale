@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aurelia Vale · AV Collections</title>
+<meta name="description" content="AV Collections — literary fiction, wellness guides, and educational resources by author Aurelia Vale. Where every word is a world.">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'EB Garamond', serif;
+    background: #0f0e0c;
+    color: #f0ece4;
+    line-height: 1.8;
+  }
+
+  /* Header */
+  header {
+    background: linear-gradient(160deg, #1a1510 0%, #2a2018 100%);
+    padding: 60px 20px 50px;
+    text-align: center;
+    border-bottom: 1px solid rgba(212,175,55,0.15);
+  }
+
+  .logo {
+    color: #D4AF37;
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+  }
+
+  .tagline {
+    color: rgba(240,236,228,0.45);
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
+
+  .divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #D4AF37, transparent);
+    margin: 24px auto;
+  }
+
+  .intro {
+    color: rgba(240,236,228,0.7);
+    font-size: 1.15rem;
+    font-style: italic;
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  /* Products */
+  .products {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 24px;
+  }
+
+  .section-title {
+    text-align: center;
+    color: #D4AF37;
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+    opacity: 0.7;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+  }
+
+  .product-card {
+    background: linear-gradient(160deg, #1a1510, #2a2018);
+    border: 1px solid rgba(212,175,55,0.12);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: border-color 0.3s;
+  }
+
+  .product-card:hover {
+    border-color: rgba(212,175,55,0.35);
+  }
+
+  .product-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+  }
+
+  .card-body {
+    padding: 24px;
+  }
+
+  .card-title {
+    color: #f0ece4;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+
+  .card-subtitle {
+    color: #D4AF37;
+    font-size: 0.95rem;
+    font-style: italic;
+    margin-bottom: 14px;
+    opacity: 0.85;
+  }
+
+  .card-desc {
+    color: rgba(240,236,228,0.6);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .card-price {
+    color: #D4AF37;
+    font-size: 1.2rem;
+    font-style: italic;
+  }
+
+  .card-btn {
+    display: inline-block;
+    background: #D4AF37;
+    color: #0f0e0c;
+    font-family: 'EB Garamond', serif;
+    font-size: 0.95rem;
+    font-style: italic;
+    padding: 10px 24px;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .card-btn:hover { background: #e8c84a; }
+
+  /* Coming soon card */
+  .coming-soon {
+    opacity: 0.6;
+  }
+
+  .coming-soon .card-btn {
+    background: transparent;
+    border: 1px solid rgba(212,175,55,0.3);
+    color: #D4AF37;
+    cursor: default;
+  }
+
+  /* About */
+  .about {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 20px 24px 80px;
+    text-align: center;
+  }
+
+  .about-title {
+    color: #D4AF37;
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    opacity: 0.7;
+  }
+
+  .about-text {
+    color: rgba(240,236,228,0.6);
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.9;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 32px 20px;
+    color: rgba(240,236,228,0.2);
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border-top: 1px solid rgba(212,175,55,0.08);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Aurelia Vale</div>
+  <div class="tagline">AV Collections · Where every word is a world</div>
+  <div class="divider"></div>
+  <p class="intro">Literary fiction, wellness guides, and resources for writers and mothers — written with care, published with purpose.</p>
+</header>
+
+<div class="products">
+  <div class="section-title">Available Now</div>
+  <div class="product-grid">
+
+    <!-- The First 40 Days -->
+    <div class="product-card">
+      <img src="https://AureliaVale.github.io/the-first-40-days/cover-40days.jpg" alt="The First 40 Days">
+      <div class="card-body">
+        <div class="card-title">The First 40 Days</div>
+        <div class="card-subtitle">A New Mom's Guided Companion</div>
+        <p class="card-desc">A warm, honest, day-by-day companion for new mothers navigating the most tender and overwhelming season of their lives.</p>
+        <div class="card-footer">
+          <div class="card-price">€7.49</div>
+          <a href="https://av-edu-lab.lemonsqueezy.com/checkout/buy/344a2a21-f88e-4655-ab10-f4e36d2beb72" class="card-btn">Download</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Deeper Story -->
+    <div class="product-card">
+      <img src="https://AureliaVale.github.io/the-deeper-story/cover-deeper-story.jpg" alt="The Deeper Story">
+      <div class="card-body">
+        <div class="card-title">The Deeper Story</div>
+        <div class="card-subtitle">50 Literary Fiction Writing Prompts for Serious Writers</div>
+        <p class="card-desc">Fifty carefully crafted prompts for writers who want to go beyond the surface — into character, voice, memory, and moral complexity.</p>
+        <div class="card-footer">
+          <div class="card-price">€4.99</div>
+          <a href="https://av-edu-lab.lemonsqueezy.com/checkout/buy/bced256c-ead4-475c-a1da-94a3c3b92686" class="card-btn">Download</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Beneath the Same Sky -->
+    <div class="product-card coming-soon">
+      <img src="https://AureliaVale.github.io/the-first-40-days/cover-40days.jpg" alt="Beneath the Same Sky" style="filter: grayscale(0.5) brightness(0.6);">
+      <div class="card-body">
+        <div class="card-title">Beneath the Same Sky</div>
+        <div class="card-subtitle">An Invitation to Understanding Islam</div>
+        <p class="card-desc">A simple, warm, and honest introduction to Islam — for every curious heart on this planet. A free gift to the world.</p>
+        <div class="card-footer">
+          <div class="card-price">Free</div>
+          <a href="#" class="card-btn">Coming Soon</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="about">
+  <div class="about-title">About the Author</div>
+  <p class="about-text">Aurelia Vale is a retired English teacher and independent author with thirty years of classroom experience. She writes literary fiction, wellness guides, and educational resources — with care, depth, and the quiet conviction that words, when chosen well, can change how a person sees the world.</p>
+</div>
+
+<footer>
+  © 2026 Aurelia Vale · AV Collections · All rights reserved
+</footer>
+
+</body>
+</html>
