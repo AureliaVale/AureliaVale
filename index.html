@@ -153,16 +153,47 @@
 
   .card-btn:hover { background: #e8c84a; }
 
-  /* Coming soon card */
-  .coming-soon {
-    opacity: 0.6;
+  .card-btn-free {
+    display: inline-block;
+    background: transparent;
+    color: #D4AF37;
+    font-family: 'EB Garamond', serif;
+    font-size: 0.95rem;
+    font-style: italic;
+    padding: 10px 24px;
+    border-radius: 3px;
+    border: 1px solid rgba(212,175,55,0.5);
+    text-decoration: none;
+    transition: all 0.2s;
   }
 
-  .coming-soon .card-btn {
-    background: transparent;
-    border: 1px solid rgba(212,175,55,0.3);
-    color: #D4AF37;
-    cursor: default;
+  .card-btn-free:hover {
+    background: rgba(212,175,55,0.1);
+    border-color: #D4AF37;
+  }
+
+  /* Free section */
+  .free-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px 60px;
+  }
+
+  .free-label {
+    color: rgba(212,175,55,0.6);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-style: normal;
+  }
+
+  .sadaqa-note {
+    text-align: center;
+    color: rgba(240,236,228,0.4);
+    font-size: 0.95rem;
+    font-style: italic;
+    margin-top: 32px;
+    line-height: 1.8;
   }
 
   /* About */
@@ -242,9 +273,29 @@
       </div>
     </div>
 
+  </div>
+</div>
 
+<!-- Free Books -->
+<div class="free-section">
+  <div class="section-title">Free to Read · Offered with Love</div>
+  <div class="product-grid">
+
+    <!-- Beneath the Same Sky -->
+    <div class="product-card">
+      <div class="card-body">
+        <div class="card-title">Beneath the Same Sky</div>
+        <div class="card-subtitle">An Invitation to Understanding Islam</div>
+        <p class="card-desc">A quiet, honest introduction to Islam — written for anyone who has ever wondered, without pressure, without argument, and with nothing to prove.</p>
+        <div class="card-footer">
+          <div class="free-label">Free</div>
+          <a href="https://drive.google.com/file/d/1SYUcYrAj-I3nVKc4EQbTj2rEx2578zGs/view?usp=sharing" target="_blank" class="card-btn-free">Read Now</a>
+        </div>
+      </div>
+    </div>
 
   </div>
+
 </div>
 
 <div class="about">
