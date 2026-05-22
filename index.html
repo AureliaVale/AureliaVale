@@ -16,7 +16,6 @@
     line-height: 1.8;
   }
 
-  /* Header */
   header {
     background: linear-gradient(160deg, #1a1510 0%, #2a2018 100%);
     padding: 60px 20px 50px;
@@ -56,11 +55,16 @@
     line-height: 1.8;
   }
 
-  /* Products */
   .products {
     max-width: 900px;
     margin: 0 auto;
     padding: 60px 24px;
+  }
+
+  .free-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px 60px;
   }
 
   .section-title {
@@ -87,9 +91,7 @@
     transition: border-color 0.3s;
   }
 
-  .product-card:hover {
-    border-color: rgba(212,175,55,0.35);
-  }
+  .product-card:hover { border-color: rgba(212,175,55,0.35); }
 
   .product-card img {
     width: 100%;
@@ -99,9 +101,7 @@
     display: block;
   }
 
-  .card-body {
-    padding: 24px;
-  }
+  .card-body { padding: 24px; }
 
   .card-title {
     color: #f0ece4;
@@ -138,6 +138,13 @@
     font-style: italic;
   }
 
+  .free-label {
+    color: rgba(212,175,55,0.6);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
   .card-btn {
     display: inline-block;
     background: #D4AF37;
@@ -172,31 +179,6 @@
     border-color: #D4AF37;
   }
 
-  /* Free section */
-  .free-section {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 24px 60px;
-  }
-
-  .free-label {
-    color: rgba(212,175,55,0.6);
-    font-size: 0.75rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    font-style: normal;
-  }
-
-  .sadaqa-note {
-    text-align: center;
-    color: rgba(240,236,228,0.4);
-    font-size: 0.95rem;
-    font-style: italic;
-    margin-top: 32px;
-    line-height: 1.8;
-  }
-
-  /* About */
   .about {
     max-width: 680px;
     margin: 0 auto;
@@ -220,7 +202,6 @@
     line-height: 1.9;
   }
 
-  /* Footer */
   footer {
     text-align: center;
     padding: 32px 20px;
@@ -245,7 +226,6 @@
   <div class="section-title">Available Now</div>
   <div class="product-grid">
 
-    <!-- The First 40 Days -->
     <div class="product-card">
       <img src="https://AureliaVale.github.io/the-first-40-days/cover-40days.jpg" alt="The First 40 Days">
       <div class="card-body">
@@ -259,7 +239,6 @@
       </div>
     </div>
 
-    <!-- The Deeper Story -->
     <div class="product-card">
       <img src="https://AureliaVale.github.io/the-deeper-story/cover-deeper-story.jpg" alt="The Deeper Story">
       <div class="card-body">
@@ -276,26 +255,24 @@
   </div>
 </div>
 
-<!-- Free Books -->
 <div class="free-section">
-  <div class="section-title">Free to Read · Offered with Love</div>
+  <div class="section-title">Free to Read</div>
   <div class="product-grid">
 
-    <!-- Beneath the Same Sky -->
     <div class="product-card">
+      <img src="https://AureliaVale.github.io/beneath.jpg.jpg" alt="Beneath the Same Sky">
       <div class="card-body">
         <div class="card-title">Beneath the Same Sky</div>
         <div class="card-subtitle">An Invitation to Understanding Islam</div>
         <p class="card-desc">A quiet, honest introduction to Islam — written for anyone who has ever wondered, without pressure, without argument, and with nothing to prove.</p>
         <div class="card-footer">
           <div class="free-label">Free</div>
-          <a href="https://drive.google.com/file/d/1SYUcYrAj-I3nVKc4EQbTj2rEx2578zGs/view?usp=sharing" target="_blank" class="card-btn-free">Read Now</a>
+          <a href="https://archive.org/details/beneath-the-same-sky/mode/2up" target="_blank" class="card-btn-free">Read Now</a>
         </div>
       </div>
     </div>
 
   </div>
-
 </div>
 
 <div class="about">
