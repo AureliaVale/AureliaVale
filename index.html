@@ -1,17 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E0X632PCT4"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-E0X632PCT4');
-  </script>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aurelia Vale | Literary Fiction, Wellness & Writing Prompts | AV Collections</title>
@@ -25,7 +14,6 @@
   <meta property="og:image" content="https://AureliaVale.github.io/the-first-40-days/cover-40days.jpg" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.aureliavale.work.gd" />
-
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -71,9 +59,22 @@
       flex-wrap: wrap;
     }
 
-    .stat { text-align: center; }
-    .stat .number { font-size: 1.4rem; display: block; }
-    .stat .label { font-size: 0.75rem; color: #8a7968; text-transform: uppercase; }
+    .stat {
+      text-align: center;
+    }
+
+    .stat .number {
+      font-size: 1.4rem;
+      display: block;
+      color: #2c2c2c;
+    }
+
+    .stat .label {
+      font-size: 0.75rem;
+      color: #8a7968;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
 
     .container {
       max-width: 760px;
@@ -87,8 +88,8 @@
       text-transform: uppercase;
       color: #8a7968;
       margin-bottom: 1.5rem;
-      border-bottom: 1px solid #e8e0d5;
       padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e8e0d5;
     }
 
     .book-card {
@@ -100,15 +101,37 @@
 
     .book-card img {
       width: 120px;
+      min-width: 120px;
       border-radius: 3px;
       box-shadow: 0 3px 14px rgba(0,0,0,0.11);
     }
 
-    .book-info h2 { font-size: 1.2rem; font-weight: normal; }
-    .book-info .book-subtitle { font-size: 0.85rem; color: #8a7968; font-style: italic; }
-    .book-info p { font-size: 0.92rem; color: #444; }
+    .book-info h2 {
+      font-size: 1.2rem;
+      font-weight: normal;
+      margin-bottom: 0.2rem;
+    }
 
-    .book-actions { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+    .book-info .book-subtitle {
+      font-size: 0.85rem;
+      color: #8a7968;
+      font-style: italic;
+      margin-bottom: 0.6rem;
+    }
+
+    .book-info p {
+      font-size: 0.92rem;
+      color: #444;
+      margin-bottom: 0.8rem;
+    }
+
+    .book-actions {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 0.5rem;
+    }
 
     .btn-primary {
       background: #2c2c2c;
@@ -117,12 +140,76 @@
       padding: 0.5rem 1.2rem;
       font-size: 0.85rem;
       border-radius: 2px;
+      letter-spacing: 0.04em;
+      transition: background 0.2s;
     }
+
+    .btn-primary:hover { background: #555; }
 
     .btn-secondary {
       color: #2c2c2c;
       text-decoration: underline;
+      text-underline-offset: 3px;
       font-size: 0.85rem;
+    }
+
+    .price {
+      font-size: 0.9rem;
+      color: #8a7968;
+    }
+
+    .free-badge {
+      display: inline-block;
+      background: #f0ebe3;
+      color: #8a7968;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 2px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #e8e0d5;
+      margin: 3rem 0;
+    }
+
+    .about {
+      font-size: 0.95rem;
+      color: #444;
+      margin-bottom: 2rem;
+    }
+
+    .newsletter {
+      background: #f5f0ea;
+      border-radius: 4px;
+      padding: 1.5rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .newsletter h3 {
+      font-size: 1rem;
+      font-weight: normal;
+      margin-bottom: 0.4rem;
+    }
+
+    .newsletter p {
+      font-size: 0.85rem;
+      color: #8a7968;
+      margin-bottom: 1rem;
+    }
+
+    .newsletter a {
+      background: #2c2c2c;
+      color: #fdfaf6;
+      text-decoration: none;
+      padding: 0.55rem 1.4rem;
+      font-size: 0.85rem;
+      border-radius: 2px;
+      letter-spacing: 0.04em;
     }
 
     footer {
@@ -133,20 +220,28 @@
       border-top: 1px solid #e8e0d5;
     }
 
+    footer a { color: #8a7968; text-decoration: none; }
+
     @media (max-width: 500px) {
       .book-card { flex-direction: column; }
+      .book-card img { width: 140px; }
     }
   </style>
-
 </head>
-
 <body>
 
   <header>
     <div class="site-name">Aurelia Vale</div>
     <div class="tagline">AV Collections · Where every word is a world</div>
-    <p class="intro">Literary fiction, wellness guides, and resources for writers and mothers.</p>
+    <p class="intro">Literary fiction, wellness guides, and resources for writers and mothers — written with care, published with purpose.</p>
   </header>
+
+  <div class="stats">
+    <div class="stat"><span class="number">30 Years</span><span class="label">Teaching</span></div>
+    <div class="stat"><span class="number">3</span><span class="label">Books Published</span></div>
+    <div class="stat"><span class="number">3</span><span class="label">Genres</span></div>
+    <div class="stat"><span class="number">1</span><span class="label">Free Book</span></div>
+  </div>
 
   <div class="container">
 
@@ -154,32 +249,83 @@
 
     <!-- Book 1 -->
     <div class="book-card">
+      <a href="https://aureliavale.github.io/the-first-40-days/">
+        <img
+          src="https://AureliaVale.github.io/the-first-40-days/cover-40days.jpg"
+          alt="The First 40 Days — A postpartum wellness guide for new mothers by Aurelia Vale"
+          onerror="this.style.display='none'"
+        />
+      </a>
       <div class="book-info">
         <h2>The First 40 Days</h2>
         <p class="book-subtitle">A New Mom's Guided Companion</p>
-        <p>Postpartum wellness guide for new mothers.</p>
+        <p>A warm, honest, day-by-day companion for new mothers navigating the most tender and overwhelming season of their lives.</p>
+        <div class="book-actions">
+          <a class="btn-primary" href="https://av-edu-lab.lemonsqueezy.com/checkout/buy/344a2a21-f88e-4655-ab10-f4e36d2beb72" target="_blank" rel="noopener">Download €7.49</a>
+          <a class="btn-secondary" href="https://aureliavale.github.io/the-first-40-days/">Learn more →</a>
+        </div>
       </div>
     </div>
 
     <!-- Book 2 -->
     <div class="book-card">
+      <a href="https://aureliavale.github.io/the-deeper-story/">
+        <img
+          src="https://AureliaVale.github.io/the-deeper-story/cover-deeper-story.jpg"
+          alt="The Deeper Story — 50 literary fiction writing prompts for serious writers by Aurelia Vale"
+          onerror="this.style.display='none'"
+        />
+      </a>
       <div class="book-info">
         <h2>The Deeper Story</h2>
-        <p class="book-subtitle">Writing Prompts</p>
-        <p>Literary fiction prompts for serious writers.</p>
+        <p class="book-subtitle">50 Literary Fiction Writing Prompts for Serious Writers</p>
+        <p>Fifty carefully crafted prompts for writers who want to go beyond the surface — into character, voice, memory, and moral complexity.</p>
+        <div class="book-actions">
+          <a class="btn-primary" href="https://av-edu-lab.lemonsqueezy.com/checkout/buy/bced256c-ead4-475c-a1da-94a3c3b92686" target="_blank" rel="noopener">Download €4.99</a>
+          <a class="btn-secondary" href="https://aureliavale.github.io/the-deeper-story/">Learn more →</a>
+        </div>
       </div>
     </div>
+
+    <p class="section-label">Free to Read</p>
 
     <!-- Book 3 -->
     <div class="book-card">
+      <a href="/beneath-the-same-sky.html">
+        <img
+          src="https://raw.githubusercontent.com/AureliaVale/AureliaVale/main/beneath.jpg.jpg"
+          alt="Beneath the Same Sky — A free introduction to Islam by Aurelia Vale"
+          onerror="this.style.display='none'"
+        />
+      </a>
       <div class="book-info">
+        <span class="free-badge">Free</span>
         <h2>Beneath the Same Sky</h2>
-        <p class="book-subtitle">Understanding Islam</p>
-        <p>Free introduction to Islam.</p>
+        <p class="book-subtitle">An Invitation to Understanding Islam</p>
+        <p>A quiet, honest introduction to Islam — written for anyone who has ever wondered, without pressure, without argument, and with nothing to prove.</p>
+        <div class="book-actions">
+          <a class="btn-primary" href="https://archive.org/details/beneath-the-same-sky/mode/2up" target="_blank" rel="noopener">Read Now</a>
+          <a class="btn-secondary" href="https://www.aureliavale.work.gd/beneath-the-same-sky.html">Learn more →</a>
+        </div>
       </div>
     </div>
 
+    <hr class="divider" />
+
+    <p class="section-label">About the Author</p>
+    <p class="about">Aurelia Vale is a retired English teacher and independent author with thirty years of classroom experience. She writes literary fiction, wellness guides, and educational resources — with care, depth, and the quiet conviction that words, when chosen well, can change how a person sees the world.</p>
+
+    <div class="newsletter">
+      <h3>Letters from Aurelia</h3>
+      <p>A quiet newsletter for readers who believe every word is a world.</p>
+      <a href="https://b7691635.sibforms.com/serve/MUIFAF8FZ_XJ8f7-kqRl4IEV224SXxUrzvVcfjHXDZGwWLKUHzyW5HItDsw7aOMrnjcIZqwOOX0uzu1wwN9icjC47R1uaVMj0-y3Py6FMR1fiT22d7SAQ7BLcrWa2j1MCAZj3E85nrttQcNXWKCzTcFkuu7ILseLwoiN8vXXNYfUbsHt89ynM8DlGxlGpVPPWnBThm2yTf7LJZb_iQ==" target="_blank" rel="noopener">Join the list</a>
+    </div>
+
   </div>
+
+  <footer>
+    © 2026 Aurelia Vale · AV Collections · All rights reserved
+  </footer>
 
 </body>
 </html>
